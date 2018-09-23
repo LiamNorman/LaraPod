@@ -11,5 +11,6 @@ $factory->define(Podcast::class, function (Faker $faker) {
         'feed_url' => 'http://feeds.com/MyTestPodCast',
         'feed_thumbnail_location' => 'images/mytestpodcast.png',
         'active' => true,
+        'is_favourite' => false,
     ];
 });

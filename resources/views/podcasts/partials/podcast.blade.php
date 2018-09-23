@@ -7,7 +7,11 @@
             <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                     <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-
+                    @if ($podcast->is_favourite == true)
+                        <i style="color: red;" class="fa fa-2x fa-heart"></i>
+                    @else
+                        <i class="fa fa-2x fa-heart"></i>
+                    @endif
                 </div>
                 <small class="text-muted"></small>
             </div>

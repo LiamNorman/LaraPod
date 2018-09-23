@@ -37,6 +37,7 @@ class PodcastTest extends TestCase
             'feed_url' => 'http://feeds.com/MyTestPodCast',
             'feed_thumbnail_location' => 'images/mytestpodcast.png',
             'active' => true,
+            'is_favourite' => false,
         ];
         Podcast::create($params);
     }
@@ -45,7 +46,8 @@ class PodcastTest extends TestCase
     function can_create_valid_podcast()
     {
         $this->withoutExceptionHandling();
-        $podcast = factory(Podcast::class)->make(['name' => 'My new fake podcast']);
+        $podcast = factory(Podcast::class)->make(['name' => 'My new fake podcast',
+            'is_favourite' => true]);
 
         $response = $this->json('POST', '/podcasts/store', $podcast->toArray());
 
@@ -68,7 +70,9 @@ class PodcastTest extends TestCase
             ->with($podcast)
             ->once()
             ->andReturn(true);
-        $mockedService->storePodcastThumbnail($podcast);
+
+        $podcastUploadService = new \App\PodcastUploadService();
+        $podcastUploadService->storePodcastThumbnail($podcast);
     }
 
     /** @test */

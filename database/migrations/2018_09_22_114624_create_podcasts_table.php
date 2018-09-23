@@ -21,6 +21,7 @@ class CreatePodcastsTable extends Migration
             $table->string('feed_url');
             $table->string('feed_thumbnail_location');
             $table->boolean('active');
+            $table->boolean('is_favourite');
             $table->timestamps();
         });
     }

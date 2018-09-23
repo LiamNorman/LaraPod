@@ -20,6 +20,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // podcast routes
 Route::get('/podcasts', 'PodcastsController@index')->name('podcasts');
+Route::get('/podcasts/{podcastId}/favourite', 'PodcastsController@favourite');
 Route::post('/podcasts/addPodcast', 'PodcastsController@addPodcast');
 Route::post('/podcasts/store', 'PodcastsController@store');
 

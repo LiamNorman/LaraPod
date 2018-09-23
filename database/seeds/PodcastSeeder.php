@@ -21,6 +21,7 @@ class PodcastSeeder extends Seeder
             'feed_url' => 'http://www.laravelpodcast.com/131a3da5',
             'feed_thumbnail_location' => 'https://media.simplecast.com/podcast/image/3894/1511814564-artwork.jpg',
             'active' => true,
+            'is_favourite' => false,
         ]);
 
         Podcast::create([
@@ -30,6 +31,7 @@ class PodcastSeeder extends Seeder
             'feed_url' => 'http://www.fullstackradio.com/97',
             'feed_thumbnail_location' => 'https://media.simplecast.com/podcast/image/279/1413649662-artwork.jpg',
             'active' => true,
+            'is_favourite' => true,
         ]);
 
         Podcast::create([
@@ -39,6 +41,7 @@ class PodcastSeeder extends Seeder
             'feed_url' => 'https://softwareengineeringdaily.com/2018/09/21/checkr-background-check-platform-with-tomas-barreto/',
             'feed_thumbnail_location' => 'http://softwaredaily.wpengine.com/wp-content/uploads/powerpress/SED_square_solid_bg.png',
             'active' => true,
+            'is_favourite' => true,
         ]);
 
         Podcast::create([
@@ -48,6 +51,7 @@ class PodcastSeeder extends Seeder
             'feed_url' => 'http://www.laravelpodcast.com/131a3da5',
             'feed_thumbnail_location' => 'https://media.simplecast.com/podcast/image/3894/1511814564-artwork.jpg',
             'active' => true,
+            'is_favourite' => true,
         ]);
 
         Podcast::create([
@@ -57,6 +61,7 @@ class PodcastSeeder extends Seeder
             'feed_url' => 'http://www.laravelpodcast.com/131a3da5',
             'feed_thumbnail_location' => 'https://media.simplecast.com/podcast/image/3894/1511814564-artwork.jpg',
             'active' => true,
+            'is_favourite' => false,
         ]);
 
         Podcast::create([
@@ -66,6 +71,7 @@ class PodcastSeeder extends Seeder
             'feed_url' => 'http://www.fullstackradio.com/95',
             'feed_thumbnail_location' => 'https://media.simplecast.com/podcast/image/279/1413649662-artwork.jpg',
             'active' => true,
+            'is_favourite' => false,
         ]);
 
 
