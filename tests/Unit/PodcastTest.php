@@ -71,8 +71,7 @@ class PodcastTest extends TestCase
             ->once()
             ->andReturn(true);
 
-        $podcastUploadService = new \App\PodcastUploadService();
-        $podcastUploadService->storePodcastThumbnail($podcast);
+        $mockedService->storePodcastThumbnail($podcast);
     }
 
     /** @test */
