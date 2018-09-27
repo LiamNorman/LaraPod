@@ -56,7 +56,6 @@ class PodcastsController extends Controller
             'web_url' => ['required'],
             'feed_url' => ['required'],
             'feed_thumbnail_location' => ['required'],
-            'is_favourite' => ['required'],
         ]);
 
         $podcast = Podcast::create([

@@ -14,26 +14,13 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 class PodcastAdded
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
-
-    public $podcast;
-
     /**
-     * Create a new event instance.
-     *
-     * @return void
+     * @var Podcast $podcast
      */
-    public function __construct($podcast)
+    public $podcast;
+    public function __construct(Podcast $podcast)
     {
         $this->podcast = $podcast;
-    }
-
-    /**
-     * Get the channels the event should broadcast on.
-     *
-     * @return \Illuminate\Broadcasting\Channel|array
-     */
-    public function broadcastOn()
-    {
-        return new PrivateChannel('channel-name');
+        // upload logic in listener
     }
 }
